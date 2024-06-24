@@ -1,9 +1,16 @@
+# 輸入為數字，輸出則為*符號為輸入數字邊長的空心正三角形
+
 # 判斷輸入值是否為大於2的整數，若不符合提示錯誤
 def input_estimate(n):
-    if n >= 2:
-        print_triangle(n)
+    if n.isdigit():
+        if int(n) >= 2:
+            print_triangle(int(n))
+        else:
+            print("請重新執行，並且輸入一個大於或等於2的整數")
+            exit()
     else:
         print("請重新執行，並且輸入一個大於或等於2的整數")
+        exit()
 
 # 空心正三角形
 def print_triangle(n):
@@ -17,5 +24,5 @@ def print_triangle(n):
             print(" ".join("*"*n))
 
 # 截取輸入資料
-n = int(input("輸入一個大於或等於2的整數："))
+n = input("輸入一個大於或等於2的整數：")
 input_estimate(n)
