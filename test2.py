@@ -11,14 +11,14 @@ def verifyInput(n):
 
 # 奇偶數、sort升降冪
 def sortOddEvent(n):
-    list_odd = []
-    list_event = []
+    listOdd = []
+    listEvent = []
     for i in list(n):
         if ( int(i) % 2) != 0:
-            list_odd.append(int(i))
+            listOdd.append(int(i))
         else:
-            list_event.append(int(i))
-    print(sorted(list_odd, reverse=True)+sorted(list_event,reverse=False))
+            listEvent.append(int(i))
+    print(sorted(listOdd, reverse=True)+sorted(listEvent,reverse=False))
 
 # 截取輸入資料，整理成數字字串
 n = input("輸入2個以上奇偶整數：")
